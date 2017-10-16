@@ -7,10 +7,10 @@ import (
 
 func GetRouter()  *httprouter.Router{
 	router := httprouter.New()
-	router.GET("/posts/:id", controllers.GetPost)
-	router.GET("/posts", controllers.GetPosts)
-	router.POST("/posts", controllers.CreatePost)
-	router.PUT("/posts/:id", controllers.UpdatePost)
-	router.DELETE("/posts:id", controllers.DeletePost)
+	router.GET("/todos/:id", controllers.GetTodo)
+	router.GET("/todos", controllers.GetTodos)
+	router.POST("/todos", controllers.CreateTodo)
+	router.PUT("/todos/:id", controllers.UpdateTodo)
+	router.DELETE("/todos/:id", controllers.DeleteTodo)
 	return router
 }
